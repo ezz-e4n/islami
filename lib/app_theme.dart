@@ -14,6 +14,7 @@ class AppTheme {
       centerTitle: true,
       color: transparent,
       elevation: 0,
+      iconTheme: const IconThemeData(color: black),
       titleTextStyle: GoogleFonts.elMessiri(
         fontWeight: FontWeight.bold,
         fontSize: 25,
