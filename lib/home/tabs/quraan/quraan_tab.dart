@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:islami/sura_details_screen.dart';
+
+import '../../../sura_args.dart';
 
 class QuraanTab extends StatelessWidget {
   const QuraanTab({super.key});
@@ -119,6 +122,7 @@ class QuraanTab extends StatelessWidget {
     "الفلق",
     "الناس"
   ];
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -135,12 +139,25 @@ class QuraanTab extends StatelessWidget {
         ),
         Expanded(
           child: ListView.separated(
-            itemBuilder: (context, index) => Text(
-              suraNames[index],
-              textAlign: TextAlign.center,
+            itemBuilder: (context, index) => InkWell(
+              onTap: () {
+                Navigator.pushNamed(
+                  context,
+                  SuraDetailsScreen.routeName,
+                  arguments: SuraArgs(suraNames[index], index),
+                );
+              },
+              child: Text(
+                suraNames[index],
+                textAlign: TextAlign.center,
+              ),
             ),
-            separatorBuilder: (context, index) => const SizedBox(
-              height: 1,
+            separatorBuilder: (context, index) => Divider(
+              height: 20,
+              thickness: .5,
+              indent: 20,
+              endIndent: 20,
+              color: Theme.of(context).primaryColor,
             ),
             itemCount: suraNames.length,
           ),
