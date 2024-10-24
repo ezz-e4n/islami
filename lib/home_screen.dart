@@ -17,7 +17,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int selectedIndex = 0;
 
-  List<Widget> tabs = const [QuraanTab(), AhadethTab(), RadioTab(), SebhaTab()];
+  List<Widget> tabs = [QuraanTab(), AhadethTab(), RadioTab(), SebhaTab()];
 
   @override
   Widget build(BuildContext context) {
@@ -50,8 +50,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 icon: ImageIcon(AssetImage('assets/images/ic_quran.png')),
               ),
               BottomNavigationBarItem(
-                label: 'Tasbeeh',
-                icon: ImageIcon(AssetImage('assets/images/ic_sebha.png')),
+                label: 'ahadeth',
+                icon: ImageIcon(AssetImage('assets/images/ic_ahadeth.png')),
               ),
               BottomNavigationBarItem(
                 label: 'radio',

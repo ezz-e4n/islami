@@ -18,6 +18,7 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
   @override
   Widget build(BuildContext context) {
     SuraArgs args = ModalRoute.of(context)!.settings.arguments as SuraArgs;
+
     loadFile(args.index);
 
     return Stack(
@@ -49,7 +50,8 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
   }
 
   void loadFile(int index) async {
-    String file = await rootBundle.loadString('assets/files/${index + 1}.txt');
+    String file = await rootBundle
+        .loadString('assets/files/quraan_files/${index + 1}.txt');
     List<String> lines = file.split('\n');
     verses = lines;
     setState(() {});
