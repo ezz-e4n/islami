@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'app_theme.dart';
 import 'screens/home/home_screen.dart';
+import 'screens/home/tabs/ahadeth/hadeth_details.dart';
 import 'screens/sura_details/sura_details.dart';
 
 void main() {
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
       routes: {
         HomeScreen.routeName: (context) => const HomeScreen(),
         SuraDetailsScreen.routeName: (context) => const SuraDetailsScreen(),
+        HadethDetails.routeName: (context) => const HadethDetails(),
       },
     );
   }
