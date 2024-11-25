@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami/app_theme.dart';
-import 'package:islami/screens/home/tabs/ahadeth_tab.dart';
+import 'package:islami/screens/home/tabs/ahadeth/ahadeth_tab.dart';
 import 'package:islami/screens/home/tabs/quraan_tab.dart';
 import 'package:islami/screens/home/tabs/sebha_tab.dart';
 
@@ -17,7 +17,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int selectedIndex = 0;
-  List<Widget> screens = const [
+  List<Widget> screens = [
     QuraanTab(),
     AhadethTab(),
     RadioTab(),

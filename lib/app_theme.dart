@@ -11,6 +11,9 @@ class MyThemeData {
     primaryColor: primary,
     appBarTheme: AppBarTheme(
       backgroundColor: transparent,
+      iconTheme: const IconThemeData(
+        color: primary,
+      ),
       scrolledUnderElevation: 0,
       centerTitle: true,
       titleTextStyle: GoogleFonts.elMessiri(
